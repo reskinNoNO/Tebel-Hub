@@ -82,8 +82,6 @@ end]]
 
 
 _G.KAITAN1CLICK = true
-BuyFruitSinper = true -- true or false
-SelectDevil = {"Venom-Venom","Soul-Soul","Dragon-Dragon","Rubber-Rubber","Bird-Bird: Phoenix","Dark-Dark","Quake-Quake","Human-Human: Buddha"}
 
 
 
@@ -170,7 +168,7 @@ spawn(function()
     asiufdl = 0
     repeat wait(1)
         print("Is GAME LOADED CHEKER : "..tostring(asiufdl))
-        asiufdl += 1
+        
     until asiufdl > 240 or game:IsLoaded()
     repeat wait()
         if not game:IsLoaded() then
@@ -194,7 +192,7 @@ end)
 joingame_timr = 0
 repeat 
 	wait(0.1)
-    joingame_timr += 0.1
+
 until game:IsLoaded()
 if _G.DevMode_ == true then
     print("Dev Mode No Config")
@@ -220,7 +218,7 @@ spawn(function()
                     gujaef = 0
                     repeat wait(1)
                         print("waiting to rejoin if  found ErrorPrompt "..tostring(gujaef))
-                        gujaef += 1
+                   
                     until gujaef > 40
                     if a.Name == 'ErrorPrompt' then
                         while wait() do
@@ -459,7 +457,7 @@ function EngUi:Window(text,maincolor)
    CloseBtn.BorderSizePixel = 0
    CloseBtn.AutoButtonColor = false
 
-   CloseIcon.Name = "CloseIcon"
+  CloseIcon.Name = "CloseIcon"
    CloseIcon.Parent = CloseBtn
    CloseIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
    CloseIcon.BackgroundTransparency = 1.000
@@ -479,7 +477,7 @@ function EngUi:Window(text,maincolor)
    MinimizeBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
    MinimizeBtn.TextSize = 14.000
    MinimizeBtn.BorderSizePixel = 0
-   MinimizeBtn.AutoButtonColor = false
+   MinimizeBtn.AutoButtonColor = true
 
    MinimizeIcon.Name = "MinimizeLabel"
    MinimizeIcon.Parent = MinimizeBtn
@@ -3764,9 +3762,9 @@ game:GetService("RunService").Heartbeat:Connect(function()
     a.Transparency = 1
     a.Size = Vector3.new(40,0.5,40)
    end
-   if x then
+   --[[if x then
     changestate()
-   end
+   end]]
    end)
 end)
 function changestate()
@@ -4089,12 +4087,12 @@ function CheckQuest()
             if _G.AutoFarm and (CFrameMon.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 3000 then
 				game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(61163.8515625, 11.6796875, 1819.7841796875))
 			end
-			if (game:GetService("Workspace")["_WorldOrigin"].Locations["Underwater City"].Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).magnitude >= 30000 then
+			--[[if (game:GetService("Workspace")["_WorldOrigin"].Locations["Underwater City"].Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).magnitude >= 30000 then
 				game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4049.96, 0.2205, -1816.05)
                 pcall(function() 
                     tween:Cancel()
                 end)
-			end
+			end]]
 		elseif MyLevel == 400 or MyLevel <= 449 then -- Fishman Commando
 			Ms = "Fishman Commando [Lv. 400]"
 			NaemQuest = "FishmanQuest"
@@ -4312,12 +4310,12 @@ function CheckQuest()
             if _G.AutoFarm and (CFrameMon.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 20000 then
 				game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(923.21252441406, 126.9760055542, 32852.83203125))
 			end
-			if (game:GetService("Workspace")["_WorldOrigin"].Locations["Cursed Ship"].Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).magnitude >= 30000 and not Melee_raid and not raidiing then
+			--[[if (game:GetService("Workspace")["_WorldOrigin"].Locations["Cursed Ship"].Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).magnitude >= 30000 and not Melee_raid and not raidiing then
 				game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6500.81738, 80.5203018, -120.303497)
                 pcall(function() 
                     tween:Cancel()
                 end)
-			end
+			end]]
 		elseif MyLevel == 1300 or MyLevel <= 1324 then -- Ship Steward [Lv. 1300]
 			Ms = "Ship Steward [Lv. 1300]"
 			NaemQuest = "ShipQuest2"
@@ -4568,8 +4566,8 @@ function CheckQuest()
 			CFrameMon = CFrame.new(-830.885742, 144.121704, -11091.0156, -0.329080194, 5.0881642e-08, 0.944301963, 6.449892e-08, 1, -3.14055519e-08, -0.944301963, 5.05715114e-08, -0.329080194)
 		end
 	end
-	CFrameQuest = CFrameQuest * CFrame.new(0,2,0)
-	CFrameMon = CFrameMon * CFrame.new(0,3,0)
+	--[[CFrameQuest = CFrameQuest * CFrame.new(0,2,0)
+	CFrameMon = CFrameMon * CFrame.new(0,3,0)]]
 end
 local VirtualUser = game:GetService('VirtualUser')
 spawn(function()
@@ -4837,14 +4835,14 @@ local VirtualUser = game:GetService('VirtualUser')
 local yedhee = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
 
 --fastattack
-spawn(function()
+--[[spawn(function()
     while wait() do
         if setscriptable then
             setscriptable(game.Players.LocalPlayer, "SimulationRadius", true)
             game.Players.LocalPlayer.SimulationRadius = math.huge * math.huge, math.huge * math.huge * 1 / 0 * 1 / 0 * 1 / 0 * 1 / 0 * 1 / 0
         end
     end
-end)
+end)]]
 spawn(function()
 	game:GetService("RunService").Stepped:Connect(function()
 		pcall(function()
@@ -4869,7 +4867,7 @@ spawn(function()
                     yedhee.activeController.timeToNextBlock = 0
                     game.Players.LocalPlayer.Character.Stun.Value = 0
                     game.Players.LocalPlayer.Character.Humanoid.Sit = false
-                    yedhee.activeController.timeToNextAttack = 0
+                    --[[yedhee.activeController.timeToNextAttack = 0
                     yedhee.activeController.attacking = false
                     yedhee.activeController.blocking = false
                     yedhee.activeController.timeToNextAttack = 0
@@ -4880,13 +4878,13 @@ spawn(function()
                     if yedhee.activeController:attack() then
                         yedhee.activeController:attack()
                     end
-                    
+                    ]]
                 end
 			end
 		end)
 	end)
 end)
-game:GetService("RunService").Heartbeat:connect(function()
+--[[game:GetService("RunService").Heartbeat:connect(function()
 	pcall(function()
         if  _G.autoSea2 or _G.autoSea3 or _G.BuddySword then --_G.AutoFarm or
             if startATkmOb then
@@ -4897,7 +4895,7 @@ game:GetService("RunService").Heartbeat:connect(function()
             end
         end
 	end)
-end)
+end)]]
 --sea2
 if world1 then
     Main40:Toggle("Auto Second world",_G.autoSea2,function(vu)
@@ -5399,9 +5397,9 @@ else
             elseif island1 then
                 raid_status:Refresh("In Raid | Island 1")
                 tweenAF2Page(island11)
-                if (island11.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).magnitude >= 500 then
+                [[if (island11.Position-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).magnitude >= 500 then
                     tweenAF2Page(island11)
-                end
+                end]]
             end
         end)
     end
@@ -5773,7 +5771,7 @@ else
                                 v.HumanoidRootPart.CanCollide = false
                                 --v.Humanoid:ChangeState(15)
                                 v.Humanoid.Health = 0
-                                if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectToolWeapon) then
+                                --[[if not game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectToolWeapon) then
                                     wait(0.6)
                                     EquipWeapon(_G.SelectToolWeapon)
                                 end
@@ -5790,7 +5788,7 @@ else
                                 if not _G.FastAttack then
                                     game:GetService'VirtualUser':CaptureController()
                                     game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-                                end
+                                end]]
                             until (not killaura and not killaura1) or not v.Parent or v.Humanoid.Health <= 0 or not game.Workspace.Enemies:FindFirstChild(v) or not _G.AutoRaid
                         end
                     end
@@ -5913,9 +5911,9 @@ function Do_Superhuman()
             if (game.Players.LocalPlayer.Backpack:FindFirstChild("Superhuman") and game.Players.LocalPlayer.Backpack:FindFirstChild("Superhuman").Level.Value >= 330) or (game.Players.LocalPlayer.Character:FindFirstChild("Superhuman") and game.Players.LocalPlayer.Character:FindFirstChild("Superhuman").Level.Value >= 330) then
                 supperhuma330 = true
                 _G.supperhuma330 = true
-                if string.find(_G.Make_Melee,"Superhuman") and string.find(_G.Make_Melee,"Electric Claw") and string.find(_G.Make_Melee,"Dargon Talon") then
+                --[[if string.find(_G.Make_Melee,"Superhuman") and string.find(_G.Make_Melee,"Electric Claw") and string.find(_G.Make_Melee,"Dargon Talon") then
                     buy_first = false
-                end
+                end]]
             end
         elseif game.Players.LocalPlayer.Backpack:FindFirstChild("Black Leg") or game.Players.LocalPlayer.Character:FindFirstChild("Black Leg") or game.Players.LocalPlayer.Backpack:FindFirstChild("Electro") or game.Players.LocalPlayer.Character:FindFirstChild("Electro") or game.Players.LocalPlayer.Backpack:FindFirstChild("Fishman Karate") or game.Players.LocalPlayer.Character:FindFirstChild("Fishman Karate") or game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Claw") or game.Players.LocalPlayer.Character:FindFirstChild("Dragon Claw") then
             if game.Players.LocalPlayer.Backpack:FindFirstChild("Electro") or game.Players.LocalPlayer.Character:FindFirstChild("Electro") then
@@ -6036,9 +6034,9 @@ function DO_ElectricClaw()
                     [1] = "BuySuperhuman"
                 }
                 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-                if string.find(_G.Make_Melee,"Superhuman") and string.find(_G.Make_Melee,"Electric Claw") and string.find(_G.Make_Melee,"Dargon Talon") then
+                --[[if string.find(_G.Make_Melee,"Superhuman") and string.find(_G.Make_Melee,"Electric Claw") and string.find(_G.Make_Melee,"Dargon Talon") then
                     buy_first = false
-                end
+                end]]
             end
         
         elseif (game.Players.LocalPlayer.Backpack:FindFirstChild("Electro") or game.Players.LocalPlayer.Character:FindFirstChild("Electro")) or ((game.Players.LocalPlayer.Character:FindFirstChild("Superhuman") or game.Players.LocalPlayer.Backpack:FindFirstChild("Superhuman")) and electro400mas and not Electricclow330) then
@@ -6135,9 +6133,9 @@ function DO_ElectricClaw()
                         [1] = "BuySuperhuman"
                     }
                     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-                    if string.find(_G.Make_Melee,"Superhuman") and string.find(_G.Make_Melee,"Electric Claw") and string.find(_G.Make_Melee,"Dargon Talon") then
+                    --[[if string.find(_G.Make_Melee,"Superhuman") and string.find(_G.Make_Melee,"Electric Claw") and string.find(_G.Make_Melee,"Dargon Talon") then
                         buy_first = false
-                    end
+                    end]]
                 else
                     print("not term enough ")
                     if fagmet7 < 5000 and not Buy_ElectricClaw then
@@ -6229,9 +6227,9 @@ function Do_DargonTalon()
                         }
                         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
                         _G.SelectToolWeapon = "Superhuman"
-                        if string.find(_G.Make_Melee,"Superhuman") and string.find(_G.Make_Melee,"Electric Claw") and string.find(_G.Make_Melee,"Dargon Talon") then
+                        --[[if string.find(_G.Make_Melee,"Superhuman") and string.find(_G.Make_Melee,"Electric Claw") and string.find(_G.Make_Melee,"Dargon Talon") then
                             buy_first = false
-                        end
+                        end]]
                     end
                 elseif game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Claw") or game.Players.LocalPlayer.Character:FindFirstChild("Dragon Claw") or DragonClow400 then
                     if game.Players.LocalPlayer.Backpack:FindFirstChild("Dragon Claw") or game.Players.LocalPlayer.Character:FindFirstChild("Dragon Claw") then
@@ -6788,7 +6786,7 @@ tp40:Button("Hop Server", function()
     Teleport() --loadstring(game:HttpGet("https://raw.githubusercontent.com/SEA0101/sea-dev/main/Hop%20server.lua"))()
 end)
 
-tp40:Toggle("Auto Low Server",_G.AutoLowServer, function(state)
+--[[tp40:Toggle("Auto Low Server",_G.AutoLowServer, function(state)
     _G.AutoLowServer = state 
 end)
 spawn(function()
@@ -6806,7 +6804,7 @@ if _G.LowPlayerSellect == nil then
 end
 tp40:Slider("Low Player",2,16,_G.LowPlayerSellect-1,function(value)
     _G.LowPlayerSellect = value
-end)
+end)]]
 other40:Label("Team Join")
 other40:Button("Join Team Pirate",function()
     local args = {
