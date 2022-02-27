@@ -168,7 +168,7 @@ spawn(function()
     asiufdl = 0
     repeat wait(1)
         print("Is GAME LOADED CHEKER : "..tostring(asiufdl))
-        
+        asiufdl += 1
     until asiufdl > 240 or game:IsLoaded()
     repeat wait()
         if not game:IsLoaded() then
@@ -192,13 +192,13 @@ end)
 joingame_timr = 0
 repeat 
 	wait(0.1)
-
+    joingame_timr += 0.1
 until game:IsLoaded()
-if _G.DevMode_ == true then
+--[[if _G.DevMode_ == true then
     print("Dev Mode No Config")
 elseif _G.DevMode_ == false then
     print("Dev Mode Normal Config")
-end
+end]]
 print(tostring(joingame_timr).." sec. to join the Game")
 pcall(function()
     game:GetService("StarterGui"):SetCore("SendNotification", {
@@ -218,7 +218,7 @@ spawn(function()
                     gujaef = 0
                     repeat wait(1)
                         print("waiting to rejoin if  found ErrorPrompt "..tostring(gujaef))
-                   
+                        gujaef += 1
                     until gujaef > 40
                     if a.Name == 'ErrorPrompt' then
                         while wait() do
@@ -457,7 +457,7 @@ function EngUi:Window(text,maincolor)
    CloseBtn.BorderSizePixel = 0
    CloseBtn.AutoButtonColor = false
 
-  CloseIcon.Name = "CloseIcon"
+--[[   CloseIcon.Name = "CloseIcon"
    CloseIcon.Parent = CloseBtn
    CloseIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
    CloseIcon.BackgroundTransparency = 1.000
@@ -477,7 +477,7 @@ function EngUi:Window(text,maincolor)
    MinimizeBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
    MinimizeBtn.TextSize = 14.000
    MinimizeBtn.BorderSizePixel = 0
-   MinimizeBtn.AutoButtonColor = true
+   MinimizeBtn.AutoButtonColor = false]]
 
    MinimizeIcon.Name = "MinimizeLabel"
    MinimizeIcon.Parent = MinimizeBtn
