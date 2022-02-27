@@ -122,7 +122,7 @@ _G.HideUI = false]]
 
 
 
---_G.KAITAN1CLICK = true
+_G.KAITAN1CLICK = true
 
 
 if _G.KAITAN1CLICK then
@@ -159,6 +159,9 @@ if _G.KAITAN1CLICK then
         _G.BuyEctoplasItem = true
         _G.BuyKabcha = true
         _G.BuddySword = true
+	  _EliteHunt = true
+        _Elite_mode = "Yama"
+    
     end
     _G.HideUI = true
 end
