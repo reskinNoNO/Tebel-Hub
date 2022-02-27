@@ -122,7 +122,7 @@ _G.HideUI = false]]
 
 
 
-_G.KAITAN1CLICK = true
+--_G.KAITAN1CLICK = true
 
 
 if _G.KAITAN1CLICK then
