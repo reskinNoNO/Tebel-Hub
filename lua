@@ -82,6 +82,8 @@ end]]
 
 
 _G.KAITAN1CLICK = true
+BuyFruitSinper = true -- true or false
+SelectDevil = {"Venom-Venom","Soul-Soul","Dragon-Dragon","Rubber-Rubber","Bird-Bird: Phoenix","Dark-Dark","Quake-Quake","Human-Human: Buddha"}
 
 
 
